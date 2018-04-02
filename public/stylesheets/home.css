@@ -1,7 +1,61 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.home-header img {
+  width: 100%;
 }
-a {
-  color: #00b7ff;
+
+.secondary {
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-between;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.secondary-column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondary-column a {
+  flex: 1;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  background-color: #64b5f6;
+  border-radius: 4px;
+  color: #fff;
+}
+.secondary-column a:first-child {
+  margin-right: 10px;
+}
+
+.secondary a img, .sign-up-button a img {
+  width: 24px;
+  margin-right: 4px;
+}
+
+.sign-up-button a {
+  width: 100%;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #fb8c00;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.activitive-info {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.activitive-info span {
+  color: #fb8c00;
+  margin: 0 14px 0 10px;
+  font-style: italic;
 }

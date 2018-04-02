@@ -3,14 +3,48 @@
   <head>
     <title>顺速驾校</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/stylesheets/comman.css"
+    <link rel="stylesheet" href="/stylesheets/comman.css" />
     <link rel="stylesheet" href="/stylesheets/home.css">
   </head>
   <body>
-    <section>
-    </section>
-    <footer>
+    <div class="home-header">
+      <img src="<%= banner %>" />
+    </div>
+    <section class="section-content">
+        <div class="activitive-info">
+            &#x1f389;&#x1f389;&#x1f389;<span><%= info %></span>&#x1f38a;&#x1f38a;&#x1f38a;
+        </div>
 
-    </footer>
+        <div class="secondary">
+          <div class="secondary-column">
+            <a href="/company">
+              <img src="/svg/company.svg" />
+              <span>公司简介</span>
+            </a>
+            <a href="/type">
+              <img src="/svg/type.svg" />
+              <span>班别介绍</span>
+            </a>
+          </div>
+          <div class="secondary-column">
+            <a href="/site">
+              <img src="/svg/loc.svg" />
+              <span>场地信息</span>
+            </a>
+            <a href="/process">
+              <img src="/svg/process.svg" />
+              <span>考试流程</span>
+            </a>
+          </div>
+
+        </div>
+        <div class="sign-up-button">
+            <a href="/signup">
+              <img src="/svg/signup.svg" />
+              <span>报名</span>
+            </a>
+        </div>
+        
+    </section>
   </body>
 </html>

@@ -28,8 +28,11 @@ app.use(AV.koa());
 
 app.use(bodyParser());
 
-router.get('/', async function(ctx) {
-  ctx.state.currentTime = new Date();
+const query = new AV.Query('Glob');
+router.get('/', async function (ctx) {
+  const result = await query.find();
+  ctx.state.banner = result[0].get('banner')[0];
+  ctx.state.info = result[0].get('activitiveInfo');
   await ctx.render('./index.ejs');
 });
 
