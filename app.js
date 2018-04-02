@@ -38,5 +38,6 @@ app.use(require('./routes/company').routes());
 app.use(require('./routes/type').routes());
 app.use(require('./routes/site').routes());
 app.use(require('./routes/process').routes());
+app.use(require('./routes/signUp').routes());
 
 module.exports = app;

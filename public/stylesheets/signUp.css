@@ -1,0 +1,85 @@
+.sign-up-content {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom, #90caf9  , white);
+}
+
+.sign-up-header img {
+  width: 100%;
+}
+ 
+.type-select {
+  margin-bottom: 20px;
+}
+
+#button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #64b5f6;
+  border: 0;
+  outline: none;
+}
+
+.contact-input {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.contact-input input {
+  width: 180px;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.select-title a {
+  text-decoration: underline;
+}
+
+.radio {
+  margin-top: 6px;
+}
+
+.radio-span {
+  display: inline-block;
+  width: 45%;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+label {
+  cursor:pointer;
+  color: #616161;
+}
+input[type="checkbox"]:checked + label, 
+input[type="radio"]:checked + label {
+  color: #42a5f5;
+}
+input[type="checkbox"] + label span,
+input[type="radio"] + label span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: radial-gradient(#eee, #9e9e9e);
+}
+input[type="radio"] + label span  {
+  border-radius: 50%;
+}
+input[type="radio"]:checked + label span {
+    background-image: radial-gradient(#42a5f5, #90caf9);
+}

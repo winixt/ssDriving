@@ -1,12 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  
-</body>
+  <head>
+    <title>顺速驾校</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/stylesheets/comman.css" />
+    <link rel="stylesheet" href="/stylesheets/signUp.css">
+  </head>
+  <body>
+    <div class="sign-up-header">
+      <img src="<%= banner %>" />
+    </div>
+    <section class="sign-up-content">
+        <div class="type-select">
+            <div class="select-title">班别选择(<a href="/type">班别详情</a>)</div>
+            <% for(var i=0; i<type.length; i++) {%>
+                <div class="radio">
+                    <input type="radio" name="type" value="<%= type[i] %>" id="type-radio-<%= i %>"/>
+                    <label for="type-radio-<%= i %>"> <span></span> <%= type[i] %> </label>
+                </div>
+            <% } %>
+        </div>
+        <div class="loc-select">
+            <div class="select-title">现车场地选择(<a href="/site">场地展示</a>)</div>
+            <% for(var i=0; i<loc.length; i++) {%>
+                <span class="radio radio-span">
+                    <input type="radio" name="loc" value="<%= loc[i] %>"  id="loc-radio-<%= i %>"/>
+                    <label for="loc-radio-<%= i %>"> <span></span> <%= loc[i] %> </label>
+                </span>
+            <% } %>
+        </div>
+        <div class="contact-input">
+          <input id="contact" type="text" max="20" placeholder="手机号/微信"/>
+        </div>
+    </section>
+    <footer>
+      <button id="button">报名</button>
+    </footer>
+    <script>
+      const button = document.getElementById('button');
+      button.addEventListener('click', function() {
+        const obj = {};
+        const contact = document.getElementById('contact');
+        const type = document.getElementsByName('type');
+        const loc = document.getElementsByName('loc');
+        obj.contact = contact.value;
+        if (!contact.value || contact.value === '') {
+          alert('请输入联系方式😊');
+        }
+
+        for (let i=0; i<type.length; i++) {  
+            if (type[i].checked) {  
+                obj.type = type[i].value;  
+            }  
+        }
+        for (let i=0; i<loc.length; i++) {  
+            if (loc[i].checked) { 
+                obj.location = loc[i].value;  
+            }
+        }
+        fetch('/signup', {
+          method: 'POST',
+          headers: { 'Content-Type' : 'application/json' },
+          body: JSON.stringify(obj),
+        }).then(function() {
+          alert('报名成功，感谢对我们的信任，我们将在一周内与您取得联系')
+          window.location.href = '/';
+        }).catch(function() {
+          alert('系统出错，请稍后再试，或在公众号留言');
+        })
+      })
+    </script>
+  </body>
 </html>
