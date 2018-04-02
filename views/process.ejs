@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>顺速驾校</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/stylesheets/comman.css" />
+    <link rel="stylesheet" href="/stylesheets/process.css">
+  </head>
+  <body>
+    <header class="header" >
+        <h1 class="title">考试流程</h1>
+    </header>
+    <section class="section-content">
+        <div class="process">
+          <h3>考试地点</h3>
+          <span><%= loc %></span>
+        </div>
+        <div class="process">
+            <h3>报名考试流程</h3>
+            <% for(var i=0; i<process.length; i++) {%>
+                <span><%= process[i] %></span><br />
+            <% } %>
+          </div>
+    </section>
+  </body>
+</html>

@@ -3,25 +3,23 @@
 const AV = require('leanengine');
 const Router = require('koa-router');
 
-const router = new Router({prefix: '/type'});
+const router = new Router({prefix: '/process'});
 
-const query = new AV.Query('Type');
+const query = new AV.Query('Glob');
 
-// 查询班别类型
+// 考试流程
 router.get('/', async function(ctx) {
   try {
     const result = await query.find();
-    ctx.state.content = result.map((item) => {
-      return item.toJSON();
-    })
+    ctx.state = result[0].get('process');
   } catch (err) {
     if (err.code === 101) {
-      ctx.state.content = [];
+      ctx.state = {};
     } else {
       throw err;
     }
   }
-  await ctx.render('type.ejs');
+  await ctx.render('process.ejs');
 });
 
 module.exports = router;

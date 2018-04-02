@@ -37,5 +37,6 @@ router.get('/', async function(ctx) {
 app.use(require('./routes/company').routes());
 app.use(require('./routes/type').routes());
 app.use(require('./routes/site').routes());
+app.use(require('./routes/process').routes());
 
 module.exports = app;

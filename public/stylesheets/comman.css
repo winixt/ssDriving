@@ -22,3 +22,13 @@ h1 {
   width: 100%;
   margin-bottom: 10px;
 }
+
+/* 信息 */
+.info {
+  color: #9e9e9e;
+}
+
+/* 内容留白 */
+.section-content {
+  padding: 0 15px;
+}
