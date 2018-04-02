@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>顺速驾校</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/stylesheets/comman.css" />
+    <link rel="stylesheet" href="/stylesheets/type.css">
+  </head>
+  <body>
+    <header class="header" >
+        <h1 class="title">班别介绍</h1>
+    </header>
+    <section>
+        <table class="content">
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].name %>(<span class="price"><%= content[i].price %></span>)</td>
+                <% } %>
+            </tr>
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].leanHours %></td>
+                <% } %>
+            </tr>
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].cost %></td>
+                <% } %>
+            </tr>
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].makeUp %></td>
+                <% } %>
+            </tr>            
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].rebuild %></td>
+                <% } %>
+            </tr>
+            <tr>
+                <% for(var i=0; i<content.length; i++) {%>
+                    <td><%= content[i].info %></td>
+                <% } %>
+            </tr>
+        <table/>
+    </section>
+  </body>
+</html>

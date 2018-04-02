@@ -1,0 +1,31 @@
+.title {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background-color: #42a5f5;
+}
+
+.content {
+  line-height: 20px;
+}
+
+.content tr td {
+  padding: 10px 8px;
+  border: 1px solid #fff;
+}
+.content tr:nth-child(2n) {
+  background-color: #90caf9;
+}
+
+.content tr:nth-child(2n - 1) {
+  background-color: #bbdefb;
+}
+
+.price {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
