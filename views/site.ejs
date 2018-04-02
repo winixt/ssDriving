@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>顺速驾校</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/stylesheets/comman.css" />
+    <link rel="stylesheet" href="/stylesheets/site.css">
+  </head>
+  <body>
+    <header class="header" >
+        <h1 class="title"><%= name %></h1>
+    </header>
+    <section class="site-detail-content">
+        <div class="location">
+          <img src="/svg/location.svg" />
+          <span><%= detailLoc %></span>
+        </div>
+        <div class="pictures">
+            <% for(var i=0; i<pictures.length; i++) {%>
+                <img src="<%= pictures[i] %>" />
+            <% } %>
+        <div/>
+    </section>
+  </body>
+</html>

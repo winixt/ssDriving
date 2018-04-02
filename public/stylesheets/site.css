@@ -1,0 +1,26 @@
+.site-content {
+  margin: 0 15px;
+}
+
+.site-content li {
+  box-sizing: border-box;
+  height: 160px;
+  padding: 6px 10px;
+  border: 1px solid #cfd8dc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.site-content li img {
+  width: 100%;
+  height: 130px;
+}
+
+.site-detail-content {
+  padding: 0 15px;
+}
+
+.location img {
+  width: 22px;
+}
